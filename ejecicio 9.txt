@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main() {
+    double primerPrevio, segundoPrevio, terceraNota, evaluacionFinal;
+
+    std::cout << "Ingrese la nota del primer previo: ";
+    std::cin >> primerPrevio;
+
+    std::cout << "Ingrese la nota del segundo previo: ";
+    std::cin >> segundoPrevio;
+
+    std::cout << "Ingrese la nota de la tercera nota: ";
+    std::cin >> terceraNota;
+
+    std::cout << "Ingrese la nota de la evaluación final: ";
+    std::cin >> evaluacionFinal;
+
+    double definitivaFinal = (primerPrevio + segundoPrevio + terceraNota + evaluacionFinal) / 4.0;
+
+    std::cout << "La definitiva final es: " << definitivaFinal << std::endl;
+
+    return 0;
+}

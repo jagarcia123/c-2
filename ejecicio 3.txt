@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    double numero1, numero2;
+
+    std::cout << "Ingrese el primer número: ";
+    std::cin >> numero1;
+
+    std::cout << "Ingrese el segundo número: ";
+    std::cin >> numero2;
+
+    double suma = numero1 + numero2;
+
+    std::cout << "La suma es " << numero1 << " y " << numero2 << " es: " << suma << std::endl;
+
+    return 0;
+}

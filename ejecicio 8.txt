@@ -1,0 +1,44 @@
+#include <iostream>
+
+int main() {
+    double temperatura;
+    char escala;
+
+    std::cout << "Ingrese la temperatura: ";
+    std::cin >> temperatura;
+
+    std::cout << "Elija la escala de temperatura (C, F, K): ";
+    std::cin >> escala;
+
+    double temperaturaCelsius, temperaturaFahrenheit, temperaturaKelvin;
+
+    switch (escala) {
+        case 'C':
+        case 'c':
+            temperaturaCelsius = temperatura;
+            temperaturaFahrenheit = (temperatura * 9.0/5.0) + 32;
+            temperaturaKelvin = temperatura + 273.15;
+            break;
+        case 'F':
+        case 'f':
+            temperaturaFahrenheit = temperatura;
+            temperaturaCelsius = (temperatura - 32) * 5.0/9.0;
+            temperaturaKelvin = (temperatura - 32) * 5.0/9.0 + 273.15;
+            break;
+        case 'K':
+        case 'k':
+            temperaturaKelvin = temperatura;
+            temperaturaCelsius = temperatura - 273.15;
+            temperaturaFahrenheit = (temperatura - 273.15) * 9.0/5.0 + 32;
+            break;
+        default:
+            std::cout << "Escala de temperatura no válida." << std::endl;
+            return 1;
+    }
+
+    std::cout << "Temperatura en Celsius: " << temperaturaCelsius << " °C" << std::endl;
+    std::cout << "Temperatura en Fahrenheit: " << temperaturaFahrenheit << " °F" << std::endl;
+    std::cout << "Temperatura en Kelvin: " << temperaturaKelvin << " K" << std::endl;
+
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    double pesoEnLibras, pesoEnKilogramos, pesoEnGramos;
+
+    std::cout << "Ingrese el peso en libras: ";
+    std::cin >> pesoEnLibras;
+
+    pesoEnKilogramos = pesoEnLibras * 0.453592;
+
+    pesoEnGramos = pesoEnKilogramos * 1000;
+
+    std::cout << "El peso en kilogramos es: " << pesoEnKilogramos << " kg" << std::endl;
+    std::cout << "El peso en gramos es: " << pesoEnGramos << " g" << std::endl;
+
+    return 0;
+}
